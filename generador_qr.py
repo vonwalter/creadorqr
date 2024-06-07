@@ -52,12 +52,9 @@ url = st.text_input("Enter the URL")
 logo_path = st.file_uploader("Upload a logo for the QR code (optional)")
 
 if st.button("Generate QR Code"):
-    if logo_path is not None:
-        generate_qr_code_with_logo(url, filename, logo_path)
-    else:
-        generate_qr_code(url, filename)
-        
+    generate_qr_code_with_logo(url, filename, logo_path)
+
     st.image(filename, use_column_width=True)
     with open(filename, "rb") as f:
-        image_data = f.read()  
+        image_data = f.read()
     download = st.download_button(label="Download QR", data=image_data, file_name="qr_generated.png")
