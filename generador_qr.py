@@ -3,8 +3,6 @@ from PIL import Image
 import streamlit as st
 
 filename = "qr_codes/qr_code.png"
-
-def generate_qr_code(url, filename)
     
 def generate_qr_code_with_logo(url, filename, logo_path=""):
     qr = qrcode.QRCode(
@@ -45,7 +43,7 @@ def generate_qr_code_with_logo(url, filename, logo_path=""):
         qr_with_logo.save(filename)
     else:
         img.save(filename)
-        
+
 # Create a Streamlit app 
 st.set_page_config(page_title="QR Code Generator", page_icon="🌐", layout="centered")
 st.image("images/supports.JPG", use_column_width=True)
