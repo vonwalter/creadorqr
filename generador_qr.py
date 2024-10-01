@@ -45,13 +45,13 @@ def generate_qr_code_with_logo(url, filename, logo_path=""):
         img.save(filename)
 
 # Create a Streamlit app 
-st.set_page_config(page_title="QR Code Generator", page_icon="🌐", layout="centered")
+st.set_page_config(page_title="Generador de código QR", page_icon="🌐", layout="centered")
 st.image("images/supports.JPG", use_column_width=True)
-st.title("QR Code Generator")
-url = st.text_input("Enter the URL")
-logo_path = st.file_uploader("Upload a logo for the QR code (optional)")
+st.title("Generador de código QR")
+url = st.text_input("Ingrese la URL")
+logo_path = st.file_uploader("Cargue un Logo para el interior del QR (opcional)")
 
-if st.button("Generate QR Code"):
+if st.button("Generar código QR"):
     generate_qr_code_with_logo(url, filename, logo_path)
 
     st.image(filename, use_column_width=True)
