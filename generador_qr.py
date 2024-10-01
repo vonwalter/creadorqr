@@ -57,4 +57,4 @@ if st.button("Generar código QR"):
     st.image(filename, use_column_width=True)
     with open(filename, "rb") as f:
         image_data = f.read()
-    download = st.download_button(label="Download QR", data=image_data, file_name="qr_generated.png")
+    download = st.download_button(label="Descargar QR", data=image_data, file_name="qr_generated.png")
